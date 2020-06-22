@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-6.9.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<input type="file" id="file"/>
+<script type="text/javascript">
+    let credential = {};
+    axios.get('/sts')
+        .then(function (response) {
+            console.log(response.data);
+            credential = response.data;
+        })
+
+    document.getElementById('file').addEventListener('change', function (e) {
+        let file = e.target.files[0];
+        let storeAs = 'upload-file-name.html';
+        let client = new OSS(credential);
+        client.multipartUpload(storeAs, file).then(function (result) {
+            console.log(result);
+        }).catch(function (err) {
+            console.log(err);
+        });
+    });
+</script>
+
+</body>
+</html>

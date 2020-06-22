@@ -1,0 +1,25 @@
+{
+  "name": "aliyun_oss_browser_upload",
+  "version": "1.0.0",
+  "description": "```bash npm install -g cross-env npm install node server/server.js ```",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "ali-oss": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigegg-software/aliyun_oss_browser_upload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigegg-software/aliyun_oss_browser_upload/issues"
+  },
+  "homepage": "https://github.com/bigegg-software/aliyun_oss_browser_upload#readme"
+}
